@@ -1,12 +1,12 @@
 #@Copyright: Mina Osama
 include  src_cfg.mk
-#-include ../lib/libMDIO.a
+
 
 all: snake_effect.elf
 
-snake_effect.elf: main.c  $(../lib/libMDIO.a )
+snake_effect.elf: main.c $(lib_path)
 ifeq ($(un),mina)
-	avr-gcc $(mcu)  $^ $@
+	$(cc) $(mcu)  $^ -lm  -o $@
 	@echo "---------------------------------"	
 	@echo "Successed!! elf file created"
 else
