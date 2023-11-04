@@ -1,15 +1,7 @@
-/*
- * MDIO_Prg.c
- *
- *  Created on: Mar 10, 2023
- *      Author: DELL
- */
-
 #include "../../LIB/STD_TYPES.h"
 #include "../../LIB/BIT_MATH.h"
 #include "MDIO_Int.h"
-#include "avr/io.h"
-
+#include "MDIO_Prv.h"
 error_t MDIO_vSetPinDirection  (u8 A_u8PortNo , u8 A_u8PinNo , u8 A_u8Direction)
 {
 	error_t Status = OK;

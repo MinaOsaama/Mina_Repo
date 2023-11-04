@@ -1,10 +1,3 @@
-/*
- * MDIO_Int.h
- *
- *  Created on: Mar 10, 2023
- *      Author: DELL
- */
-
 #ifndef MCAL_DIO_MDIO_INT_H_
 #define MCAL_DIO_MDIO_INT_H_
 
