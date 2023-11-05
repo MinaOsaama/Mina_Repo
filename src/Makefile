@@ -38,6 +38,3 @@ ifeq ($(un),mina)
 else
 	@echo "Unauthorized user"
 endif
-  
-  #$(mcu)  mcu:= -mmcu=atmega32
-  #!<arch>
