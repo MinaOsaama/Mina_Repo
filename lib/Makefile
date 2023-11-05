@@ -28,5 +28,5 @@ clean:
 ifeq ($(un),mina)
 	rm *.o *.a
 else
-	@echo "Unauthorized user"
+	@echo "Unauthorized user"
 endif
