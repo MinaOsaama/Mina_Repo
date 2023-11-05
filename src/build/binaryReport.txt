@@ -1,0 +1,8 @@
+Binary data for snake_effect.elf
+   text	   data	    bss	    dec	    hex	filename
+   2774	      0	      0	   2774	    ad6	build/snake_effect.elf
+   2774	      0	      0	   2774	    ad6	(TOTALS)
+Binary data for snake_effect.hex
+   text	   data	    bss	    dec	    hex	filename
+      0	   2774	      0	   2774	    ad6	build/snake_effect.hex
+      0	   2774	      0	   2774	    ad6	(TOTALS)

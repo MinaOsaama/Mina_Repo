@@ -1,14 +1,25 @@
 #@Copyright: Mina Osama
 include  src_cfg.mk
 
-
 all: snake_effect.elf
 
 snake_effect.elf: main.c $(lib_path)
 ifeq ($(un),mina)
-	$(cc) $(mcu)  $^ -lm  -o $@
+	$(cc)$(f) $(mcu)  $^ -lm  -o $@
 	@echo "---------------------------------"	
 	@echo "Successed!! elf file created"
+	@echo "---------------------------------"	
+	$(elf_to_hex) $@ $(hex)
+	@echo "Successed!! hex file created"
+	@echo "---------------------------------"
+	mv $@ $(hex)  $(build_dir)
+	@echo "Successed!! moved to build"
+	@echo "---------------------------------"
+	@echo  "Binary data for snake_effect.elf" > $(bin)
+	$(elf_size) >> $(bin)
+	@echo "---------------------------------"
+	@echo  "Binary data for snake_effect.hex" >> $(bin)
+	$(hex_size) >> $(bin)
 else
 	@echo "Unauthorized user"
 endif
@@ -23,7 +34,7 @@ endif
 
 clean: 
 ifeq ($(un),mina)
-	rm *.o *.a
+	rm *.o *.a ./build/*.elf ./build/*.hex ./build/*.exe ./build/*.txt *.elf *.hex *.exe 
 else
 	@echo "Unauthorized user"
 endif
