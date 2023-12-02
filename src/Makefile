@@ -3,9 +3,10 @@ include  src_cfg.mk
 
 all: snake_effect.elf
 
-snake_effect.elf: main.c $(lib_path)
+snake_effect.elf: main.c 
 ifeq ($(un),mina)
-	$(cc)$(f) $(mcu)  $^ -lm  -o $@
+	(cd $(path);make clean;make all;cd -)
+	$(cc)$(f) $(mcu)  $^ $(lib_path) -lm  -o $@
 	@echo "---------------------------------"	
 	@echo "Successed!! elf file created"
 	@echo "---------------------------------"	

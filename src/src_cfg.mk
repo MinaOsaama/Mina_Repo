@@ -3,6 +3,7 @@ f := -gcc
 un := $(shell whoami)
 mcu:= -mmcu=atmega32
 lib_path := ../lib/libMDIO.a 
+path := ../lib/
 elf_to_hex := avr-objcopy -O ihex
 hex := snake_effect.hex
 build_dir := ./build
