@@ -34,7 +34,7 @@ endif
 
 clean: 
 ifeq ($(un),mina)
-	rm *.o *.a ./build/*.elf ./build/*.hex ./build/*.exe ./build/*.txt *.elf *.hex *.exe 
+	rm -rf *.o *.a ./build/*.elf ./build/*.hex ./build/*.exe ./build/*.txt *.elf *.hex *.exe 
 else
 	@echo "Unauthorized user"
 endif
